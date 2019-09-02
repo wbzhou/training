@@ -1,0 +1,2 @@
+1.https://gceasy.io/ 可分析jvm的dump文件.
+  之前有个while循环里调用stringBudiler.toString去比较,这样发现很烧cpu,因为每次.toString后都会去new String();
