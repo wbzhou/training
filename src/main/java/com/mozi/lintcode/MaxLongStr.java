@@ -12,7 +12,7 @@ public class MaxLongStr {
 		int arr[]={-2,1,-3,4,-1,2,1,-5,4};
 
 		int maxLong=getMaxLongStr(arr);
-		System.out.println("最长的子字符串的和:"+maxLong);
+		System.out.println("最大的子字符串的和:"+maxLong);
 	}
 	public static  int getMaxLongStr(int[] arr){
 
