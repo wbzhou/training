@@ -86,14 +86,14 @@ public class LengthOfLongestSubstring {
      */
     public static  int newSlide(String s) {
         int len=0;
-        Map<Character,Integer> sub=new HashMap<>();
+        Map<Character,Integer> windowMap=new HashMap<>();
         int i=0,j=0;
         while(i<s.length()&&j<s.length()) {
-            if(sub.containsKey(s.charAt(j))) {
+            if(windowMap.containsKey(s.charAt(j))) {
                 //应该保证滑动窗口的起始位置依次向前，不能倒退
-                i=Math.max(i, sub.get(s.charAt(j))+1);//Math.max的作用 ：考虑字符串abba这个例子
+                i=Math.max(i, windowMap.get(s.charAt(j))+1);//Math.max的作用 ：考虑字符串abba这个例子
             }
-            sub.put(s.charAt(j), j);
+            windowMap.put(s.charAt(j), j);
             j++;
             len=Math.max(len, j-i);
 
