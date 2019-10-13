@@ -19,8 +19,9 @@ public class LongestSubstringKDistinct {
     public  void test(){
 
 
-        System.out.println("最后为:"+lengthOfLongestSubstringKDistinct("tfpkeeceba",3));
+        System.out.println("最后为:"+lengthOfLongestSubstringKDistinct("abcabcbb",3));
     }
+
 
 
     public int lengthOfLongestSubstringKDistinct(String s, int k) {
