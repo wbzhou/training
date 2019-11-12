@@ -45,6 +45,8 @@ public class QuickTopK {
 		int[] arr = {10,7,2,4,7,62,3,4,2,1,8,9,19};
 		System.out.println("第k大的数为:"+quickSort(arr, 4, 0, arr.length - 1));
 		System.out.println("排序结果：" + Arrays.toString(arr));
+
+
 	}
 
 	private static void swap (int arr [],int i,int j){

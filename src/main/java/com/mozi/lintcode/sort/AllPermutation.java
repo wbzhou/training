@@ -27,7 +27,7 @@ public class AllPermutation {
 		ArrayList<String> ans = new ArrayList<>();//所有排列的可能都在这里
 		if (str != null || str.length() > 0) {
 			help(0, str.toCharArray(), ans);
-			Collections.sort(ans);
+//			Collections.sort(ans);
 		}
 
 		return ans;

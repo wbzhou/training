@@ -1,6 +1,5 @@
 package com.mozi.lintcode;
 
-import com.alibaba.fastjson.JSONObject;
 
 /**
  * @author :zhouwenbin
