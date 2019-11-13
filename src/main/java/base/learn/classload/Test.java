@@ -1,5 +1,8 @@
 package base.learn.classload;
 
+import com.alibaba.fastjson.JSONObject;
+
+import java.math.BigDecimal;
 import java.util.TreeMap;
 
 /**
@@ -43,10 +46,34 @@ public class Test
         // TODO Auto-generated method stub
 //        Parent.parentStaticMethod();
 //        Parent.parentStaticMethod();
-        Child child = new Child();
+//        Child child = new Child();
 //        Child.childStaticMethod();
-        
-//        
+        Test test= new Test();
+
+        BigDecimal intTotal = new BigDecimal(0);
+        intTotal= intTotal.add(new BigDecimal(120 + 30));
+        intTotal.add(new BigDecimal(120));
+        System.out.println("最后:"+intTotal);
+
+//        test.exp();
+
+//
     }
+
+
+//    public String exp(){
+//        try{
+//            throw new Exception("  ");
+//        }catch(Exception e){
+//            log.info("xxx你好");
+//            throw new Exception("  ");
+//        }finally{
+//            log.info("xxx我好");
+//            return "false";
+//        }
+//
+////		return "true";
+//    }
+
 
 }

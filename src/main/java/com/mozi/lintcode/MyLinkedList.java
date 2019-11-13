@@ -43,7 +43,7 @@ public class MyLinkedList {
 	 * @param index
 	 * @return
 	 */
-	public boolean deleteNode(int index){
+	public boolean 	deleteNode(int index){
 		if(index<1 || index>length()){//待删除结点不存在
 			return false;
 		}
