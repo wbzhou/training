@@ -18,6 +18,19 @@ public class ReverseStr {
 		}
 		System.out.println("结果1:"+rev);
 		System.out.println("结果2:"+twoRes);
+		System.out.println("结果3:"+forReverse(str.toCharArray()));
+	}
+
+
+	public static String forReverse(char[] s) {
+		int sLength=s.length;
+		char temp;
+		for(int i=0,j=sLength-1;i<j;i++,j--){
+			temp=s[i];
+			s[i]=s[j];
+			s[j]=temp;
+		}
+		return String.valueOf(s);
 	}
 
 
