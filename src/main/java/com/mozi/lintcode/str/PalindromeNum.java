@@ -26,7 +26,7 @@ package com.mozi.lintcode.str;
 你能不将整数转为字符串来解决这个问题吗？
 
  **/
-public class Palindrome {
+public class PalindromeNum {
 
 	public static void main(String[] args) {
 
