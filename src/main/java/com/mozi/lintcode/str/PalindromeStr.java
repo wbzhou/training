@@ -28,6 +28,7 @@ public class PalindromeStr	 {
 
 		System.out.println("结果1:"+isPalindrome("race a car"));
 		System.out.println("结果2:"+isPalindrome("A man, a plan, a canal: Panama"));
+		System.out.println("结果2:"+isPalindrome("aa"));
 	}
 
 	public static  boolean isPalindrome(String s) {
