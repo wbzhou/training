@@ -2,8 +2,10 @@ package com.mozi.lintcode;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Stack;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -21,40 +23,40 @@ public class TestTraining {
 
 	public static void main(String[] args) {
 
-		String str="{ \"status\": 0, \"org\": \"SHA\", \"dst\": \"SYD\", \"date\": \"" +
-				"\", \"rdate\": \"\", \"qid\": \"1573116726031329\", \"bid\": \"\", \"cost\": 7, \"total\": 1, \"done\": true, \"progress_bar\": true, \"cabin\": \"Y\", \"passsum\": \"1-0\", \"gouwuchetitle\": \"智选购票 尽在购物车\", \"gouwuchecontent\": \"管家AI帮您实时监测价格波动，帮您发现低价\", \"platformprice\": \"0,0,0\", \"datas\": [ { \"flight_info\": { \"go\": [ { \"fn\": \"QF130$PVG$SYD\", \"accode\": \"QF\", \"alliance\": \"寰宇一家\", \"lcc\": false, \"da\": \"PVG\", \"aa\": \"SYD\", \"src\": \"dt\", \"departuretime\": 1580385900000, \"arrivingtime\": 1580434800000, \"timesrc\": \"qunar-api-custom\", \"proximaterate\": \"\", \"dterminal\": \"T1\", \"aterminal\": \"T1\", \"dcitycode\": \"SHS\", \"acitycode\": \"SYD\", \"optfn\": \"\", \"isshare\": 0, \"wifi\": 0, \"redeye\": \"0\", \"planecode\": \"A330-300\", \"planeyear\": \"\", \"paintingicon\": \"\", \"dtdiff\": 0 } ], \"flightinfoid\": \"v2_0_date{2020-01-30}dst{SYD}dtime{1580385900:48900}fn{QF130$PVG$SYD}org{SHA}cabin{Y}passsum{1-0}\", \"productid\": \"v2_0_date{2020-01-30}dst{SYD}fn{QF130$PVG$SYD}org{SHA}_Y\", \"platformprice\": \"0,0,0\" }, \"src_price\": [ { \"price\": 5726, \"tax\": 980, \"childprice\": 5669, \"childtax\": 980, \"oriprice\": 5669, \"addtozhixiao\": false, \"usefd\": false, \"caigouprice\": 5669, \"childcaigouprice\": 5669, \"pubprice\": -1, \"childpubprice\": -1, \"jsprice\": -1, \"childjsprice\": -1, \"ydfaceprice\": 5669, \"childydfaceprice\": 5669, \"seatleft\": \"A\", \"cabin\": \"Y\", \"pid\": \"\", \"passengerlimit\": \"\", \"share\": false, \"score\": 0, \"deplysrc\": \"\", \"src\": \"qunar-api-custom\", \"analyseSourceEntry\": \"ticketmain\", \"packageid\": 0, \"duocheng_price_type\": 2, \"priceid\": \"v4_0_1{Y}2{Y}3{hbgj}4{L}5{1}7{1}8{125}\", \"cabin_type\": 0, \"seat\": [ { \"fn\": \"QF130$PVG$SYD\", \"bct\": \"Y\", \"sct\": \"\", \"ct\": \"L\", \"extraparameters\": { } } ], \"updatetime\": \"2019-11-07 16:52:10\", \"expired\": false, \"pricetag\": 0, \"apply\": 0, \"hasdetail\": true, \"remark\": \"\", \"srcurl\": \"\", \"newproductid\": \"\", \"ycode\": \"\", \"rule\": \"儿童退改签规定同成人\\n\", \"textrule\": \"\", \"endorsementcondition\": \"\", \"refundmarkup\": \"\", \"changemarkup\": \"\", \"refundcond\": \"\", \"changecond\": \"\", \"usedchangecond\": \"\", \"usedrefundcond\": \"\", \"luggagecond\": \"\", \"refundcondition\": [ { \"title\": \"全程未使用\", \"rule\": [ { \"title\": \"\", \"rule\": [ { \"title\": \"起飞前\", \"desc\": \"不允许\" }, { \"title\": \"起飞后\", \"desc\": \"不允许\" } ] } ] }, { \"title\": \"部分使用\", \"rule\": [ ] } ], \"reroutecondition\": [ { \"title\": \"全程未使用\", \"rule\": [ { \"title\": \"\", \"rule\": [ { \"title\": \"起飞前\", \"desc\": \"不允许\" }, { \"title\": \"起飞后\", \"desc\": \"不允许\" } ] } ] }, { \"title\": \"部分使用\", \"rule\": [ ] } ], \"callrule\": 0, \"luggage\": \"\", \"duoren_price\": 0, \"pricetype\": 1, \"producttype\": \"C2P\", \"tickettime\": \"48.0\", \"minage\": \"0\", \"maxage\": \"0\", \"routetickettype\": \"3\", \"platingcarrier\": \"\", \"vipgrade\": 0, \"extra\": { \"packagetype\": \"0\" }, \"grade\": \"\", \"phone\": \"\", \"jumpurl\": \"\", \"cookie\": \"\", \"hide\": 0, \"sequenceid\": 0, \"orderflag\": 1 } ], \"expired\": false } ] }";
+		int code=1002;
 
+		int transCode=code;
+		switch (code){
+			case 1002:
+			case 1005:
+			case 1009:
+				transCode=21*10000+code;
+				break;
 
-		String verify="123";
-		System.out.println(verify.compareTo("20163"));
-		System.out.println("20163".compareTo("20163"));
-		System.out.println("8888812".compareTo("20163"));
-		System.out.println(verify.indexOf("20163"));
-		System.out.println("8888812".indexOf("20163"));
-		System.out.println("20163".indexOf("20163"));
-
-		;
-		JSONObject json=JSONObject.parseObject(str);
-		JSONArray datas = json.getJSONArray("datas");
-		for(int i=0;i<datas.size();i++){
-			JSONObject data = datas.getJSONObject(i);
-			JSONArray gos = data.getJSONObject("flight_info").getJSONArray("go");
-			JSONArray backs = data.getJSONObject("flight_info").getJSONArray("back");
-
-			for(int g=0;g<gos.size();g++){
-
-				JSONObject gOne = gos.getJSONObject(g);
-				if(gOne.getString("fn").equals("QF130$PVG$SYD"))
-					gOne.put("fn","周文");
-
-			}
-
-
+			default:
+				break;
 		}
 
-		System.out.println(json);
+		System.out.println(transCode);
 
 
+
+	}
+
+	public static boolean checkStrIsNum(String str) {
+		try {
+			if(StringUtils.isBlank(str))
+				return false;
+			for (int i = 0; i < str.length(); i++) {
+				if (!Character.isDigit(str.charAt(i))) {
+					return false;
+				}
+			}
+		} catch (Exception e) {
+			return true;
+		}
+
+		return true;
 	}
 
 	public void hydrogen(Runnable releaseHydrogen) throws InterruptedException {

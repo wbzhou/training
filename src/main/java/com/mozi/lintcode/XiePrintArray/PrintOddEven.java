@@ -10,8 +10,8 @@ public class PrintOddEven {
 	private static volatile int i = 1;
 	public static void main(String[] args) {
 		Counter counter = new Counter();
-//		new Thread(new PrintOdd(counter)).start();
-//		new Thread(new PrintEven(counter)).start();
+		new Thread(new PrintOdd(counter)).start();
+		new Thread(new PrintEven(counter)).start();
 
 
 		final Object obj = new Object();

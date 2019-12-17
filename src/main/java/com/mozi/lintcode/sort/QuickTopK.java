@@ -30,7 +30,8 @@ public class QuickTopK {
 		arr[i] = temp;
 
 		if(j==k-1)
-		   return temp;
+//		   return temp;
+		   return arr[j];
 		else if(j>k-1){
 			return quickSort(arr,k, left, j-1);//递归调用左半数组
 		}else{
