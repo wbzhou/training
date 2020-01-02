@@ -36,9 +36,9 @@ public class LongestPalindromeSubStr {
 
 
 //		System.out.println("结果1:"+longestPalindrome("a"));
-//		System.out.println("结果1:"+longestPalindrome("ab"));
+		System.out.println("结果1:"+longestPalindrome("abcdee"));
 //		System.out.println("结果1:"+longestPalindrome("aba"));
-//		System.out.println("结果1:"+longestPalindrome("abcdcba"));
+		System.out.println("结果1:"+longestPalindrome("abcdcba"));
 		System.out.println("结果1:"+longestPalindrome("abccccdd"));
 		System.out.println("结果1:"+longSize("abccccdd"));
 	}

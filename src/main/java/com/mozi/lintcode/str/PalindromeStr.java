@@ -35,6 +35,7 @@ public class PalindromeStr	 {
 		if(s.length() == 0)
 			return true;
 		int l = 0, r = s.length() - 1;
+//		while(l<r)
 		while(l < r){
 			if(!Character.isLetterOrDigit(s.charAt(l))){
 				l++;

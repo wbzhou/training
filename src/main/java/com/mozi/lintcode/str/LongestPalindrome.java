@@ -5,6 +5,7 @@ package com.mozi.lintcode.str;
  * @time   :19/11/15
  * @comment:
  *
+ *最长的回文串
  *
  * 给定一个包含大写字母和小写字母的字符串，找到通过这些字母构造成的最长的回文串。
 

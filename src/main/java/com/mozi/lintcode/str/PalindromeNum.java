@@ -29,6 +29,13 @@ package com.mozi.lintcode.str;
 public class PalindromeNum {
 
 	public static void main(String[] args) {
+		int cur=1;
+		int tar=0;
+		while (cur>0){
+			tar=tar*10+cur%10;
+			cur=cur/10;
+		}
+//		return tar==cur;
 
 
 

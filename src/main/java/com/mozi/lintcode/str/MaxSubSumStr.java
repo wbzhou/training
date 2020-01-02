@@ -1,11 +1,12 @@
-package com.mozi.lintcode;
+package com.mozi.lintcode.str;
 
 /**
  * @author :zhouwenbin
  * @time   :19/9/2
  * @comment:动态规划法
+ * 最大字序列和
  **/
-public class MaxLongArr {
+public class MaxSubSumStr {
 
 	public static void main(String[] args){
 

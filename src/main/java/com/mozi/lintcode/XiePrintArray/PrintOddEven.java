@@ -1,5 +1,7 @@
 package com.mozi.lintcode.XiePrintArray;
 
+import java.util.concurrent.Semaphore;
+
 /**
  * @author :zhouwenbin
  * @time   :19/11/6
@@ -12,6 +14,8 @@ public class PrintOddEven {
 		Counter counter = new Counter();
 		new Thread(new PrintOdd(counter)).start();
 		new Thread(new PrintEven(counter)).start();
+
+		Semaphore e = new Semaphore(0);
 
 
 		final Object obj = new Object();

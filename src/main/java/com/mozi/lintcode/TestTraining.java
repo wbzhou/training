@@ -1,14 +1,17 @@
 package com.mozi.lintcode;
 
+import base.learn.classload.TestUser;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Stack;
+import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 /**
  * @author :zhouwenbin
@@ -23,22 +26,7 @@ public class TestTraining {
 
 	public static void main(String[] args) {
 
-		int code=1002;
-
-		int transCode=code;
-		switch (code){
-			case 1002:
-			case 1005:
-			case 1009:
-				transCode=21*10000+code;
-				break;
-
-			default:
-				break;
-		}
-
-		System.out.println(transCode);
-
+		ExecutorService exec = Executors.newCachedThreadPool();
 
 
 	}
