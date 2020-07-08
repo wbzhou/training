@@ -43,7 +43,7 @@ public class MyLinkedList {
 	 * @param index
 	 * @return
 	 */
-	public boolean deleteNode(int index){
+	public boolean 	deleteNode(int index){
 		if(index<1 || index>length()){//待删除结点不存在
 			return false;
 		}
@@ -138,6 +138,11 @@ public class MyLinkedList {
 	 * 返回倒数第k个结点,
 	 * 两个指针，第一个指针向前移动k-1次，之后两个指针共同前进，
 	 * 当前面的指针到达末尾时，后面的指针所在的位置就是倒数第k个位置
+	 *
+	 *
+	 *
+	 * 可以采取建立两个指针，一个指针一次遍历两个节点，另一个节点一次遍历一个节点，当快指针遍历到空节点时，慢指针指向的位置为链表的中间位置，
+	 * 这种解决问题的方法称为快慢指针方法。（面试尽量用这种方式，能够提高印象分）
 	 * @param k
 	 * @return
 	 */
