@@ -3,8 +3,11 @@ package com.mozi.lintcode;
 import base.learn.classload.TestUser;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -23,13 +26,56 @@ public class TestTraining {
 	Semaphore sema4h = new Semaphore(2);
 	Semaphore sema4o = new Semaphore(1);
 	AtomicInteger hcount = new AtomicInteger(0);
+	public static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMM");
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
-		ExecutorService exec = Executors.newCachedThreadPool();
+
+
+
+		List<String> tmpL=Arrays.asList("".split(","));
+
+		Set<String> userChSet=new HashSet<>();
+		final String join = StringUtils.join(new ArrayList(userChSet).toArray(), ",");
+		System.out.println(join);
+//		list.remove("oo");
+//		Iterator<String> iterable = list.iterator();
+//		while (iterable.hasNext()){
+//			String s = iterable.next();
+//			if (s.equals("oo")){
+//				iterable.remove();
+//			}
+//		}
+//		System.out.println(StringUtils.join(list.toArray(), ","));
+//		SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+//		SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//		Date date = inputFormat.parse("2020-09-02T16:00:00.000Z");
+//		String formattedDate = outputFormat.format(date);
+//		System.out.println(formattedDate);
+
+
 
 
 	}
+
+//	public String test(){
+//		try{
+//			throw new Exception("  ");
+//		}catch(Exception e){
+//			System.out.println(1);
+//			throw new Exception("  ");
+//		}finally{
+//			System.out.println(1);
+//			return "false";
+//		}
+//
+//		return "true";
+//	}
+
+
+
+//		list.stream().collect(Collectors.groupingBy(String ::list.get));
+
 
 	public static boolean checkStrIsNum(String str) {
 		try {

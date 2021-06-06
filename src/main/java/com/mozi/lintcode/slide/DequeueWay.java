@@ -4,7 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 /**
  * @author :zhouwenbin

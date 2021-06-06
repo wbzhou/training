@@ -15,14 +15,13 @@ import java.util.Arrays;
 
 public class QuickSort1 {
 	public static void quickSort(int[] arr,int left,int right){
-		int i,j,temp;
 		if(left>right){
 			return;
 		}
-		i=left;
-		j=right;
+		int i=left;
+		int j=right;
 		//temp就是基准位
-		temp = arr[left];
+		int temp = arr[left];
 
 		while (i<j) {
 			//先看右边，依次往左递减

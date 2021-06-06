@@ -38,14 +38,14 @@ public class PalindromeNum {
 //		return tar==cur;
 
 
-
-		System.out.println("结果1:"+isPalindRome(-11));
-		System.out.println("结果2:"+isPalindRome(11));
-		System.out.println("结果2:"+isPalindRome(112));
+//
+//		System.out.println("结果1:"+isPalindRome(-11));
+//		System.out.println("结果2:"+isPalindRome(11));
+//		System.out.println("结果2:"+isPalindRome(112));
 		System.out.println("结果3:"+isPalindRome(12321));
 	}
 
-	public static  boolean isPalindRome(int x){
+	public static  boolean isPalindRome(int x){//*%/ 乘模扛
 
 		if(x<0)
 			return false;

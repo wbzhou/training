@@ -9,6 +9,8 @@ import java.util.Arrays;
  **/
 public class QuickTopK {
 
+
+
 	public static int  quickSort(int[] arr,int k,int left,int right){
 		int i=left;
 		int j=right;

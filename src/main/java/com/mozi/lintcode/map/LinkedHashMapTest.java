@@ -1,5 +1,7 @@
 package com.mozi.lintcode.map;
 
+import com.alibaba.fastjson.JSONObject;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -27,6 +29,10 @@ public class LinkedHashMapTest {
 //			System.out.println("key: " + entry.getKey() + ", value: " + entry.getValue());
 //		}
 
+
+		String str="{\"data\":\"{\\\"expiredAt\\\":1586830455000,\\\"amount\\\":1,\\\"orderNo\\\":\\\"T50414094415194\\\",\\\"merchantId\\\":\\\"2090010112\\\",\\\"commodityDetail\\\":\\\"平凉 - 平凉南\\\",\\\"sign\\\":\\\"AD32F7FECDBC05323851FBAD963E084F\\\",\\\"signType\\\":\\\"MD5\\\",\\\"currency\\\":\\\"CNY\\\",\\\"returnUrl\\\":\\\"http://dl.rsscc.cn/gtgjwap/Vue/jego/#/ticketAgent/orderDetails?orderId=T50414094415194&needDelay=1\\\",\\\"commodityName\\\":\\\"代购订单支付\\\"}\",\"status\":\"0\"}";
+		JSONObject json=JSONObject.parseObject(str);
+		System.out.println(json);
 
 
 		LinkedHashMap<String, Integer> sortMap = new LinkedHashMap<>(16, 0.75f, false);

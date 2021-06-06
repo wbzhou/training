@@ -1,9 +1,7 @@
 package base.learn.classload;
 
-import com.alibaba.fastjson.JSONObject;
-
 import java.math.BigDecimal;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
 @author :zhouwenbin
@@ -38,7 +36,7 @@ import java.util.TreeMap;
 
 父静态块--》子静--》--》父非静初始块 --》父构造--》子非静初始块--》子构造--》
 **/
-public class Test
+public class ZTest
 {
    
     public static void main(String[] args)
@@ -48,12 +46,26 @@ public class Test
 //        Parent.parentStaticMethod();
 //        Child child = new Child();
 //        Child.childStaticMethod();
-        Test test= new Test();
+        ZTest test= new ZTest();
+        List tmpList=new ArrayList<>();
+//        String tmStr="111";
+//        String[] arr="11".split("");
+//        System.out.println(tmStr.length());
+//        System.out.println(arr.length);
+//
+//        HashMap map=new HashMap();
+//        map.put(1,1);
+//        map.put(1,1);
+//        System.out.println(map.size());
+//        map.put(1,2);
+//        System.out.println(map.size());
 
-        BigDecimal intTotal = new BigDecimal(0);
-        intTotal= intTotal.add(new BigDecimal(120 + 30));
-        intTotal.add(new BigDecimal(120));
-        System.out.println("最后:"+intTotal);
+        LinkedList<Integer> linkedList=new LinkedList<>();
+
+//        tmpList.size()
+
+
+//        System.out.println("最后:"+left);
 
 //        test.exp();
 

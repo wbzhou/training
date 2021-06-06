@@ -182,7 +182,7 @@ public class MyLinkedList {
 	public void reserveLink(){
 		Node curNode = head;//头结点
 		Node preNode = null;//前一个结点
-		while(curNode != null){
+		while(curNode != null){//首尾next相对)
 			Node nextNode = curNode.next;//保留下一个结点
 			curNode.next = preNode;//指针反转
 			preNode = curNode;//前结点后移

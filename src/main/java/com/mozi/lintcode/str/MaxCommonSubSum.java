@@ -44,18 +44,19 @@ public class MaxCommonSubSum {
 		System.out.println("最长公共子序列:" + maxLong);
 	}
 
-	public static  int longestCommonSubsequence(String text1, String text2) {
-		int[][] dip = new int[text1.length() + 1][text2.length() + 1];
-		for (int i = 1; i <= text1.length(); i++) {
-			for (int j = 1; j <=text1.length(); j++) {
-				if (text1.charAt(i - 1) == text2.charAt(j - 1))
-					dip[i][j] = dip[i - 1][j - 1] + 1;
+	public static int longestCommonSubsequence(String text1, String text2) {
+		int[][] dip=new int[text1.length()+1][text2.length()+1];
+		System.out.println(dip[0][0]);
+		System.out.println(dip[1][1]);
+		for(int i=1;i<=text1.length();i++){
+			for(int j=1;j<=text2.length();j++){
+				if(text1.charAt(i-1)==text2.charAt(j-1))
+					dip[i][j]=dip[i-1][j-1]+1;
 				else
-					dip[i][j] = Math.max(dip[i - 1][j], dip[i][j - 1]);
+					dip[i][j]=Math.max(dip[i-1][j],dip[i][j-1]);
 			}
 		}
 		return dip[text1.length()][text2.length()];
 	}
-
 
 }

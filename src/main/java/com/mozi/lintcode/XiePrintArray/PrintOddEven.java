@@ -20,7 +20,7 @@ public class PrintOddEven {
 
 		final Object obj = new Object();
 
-		Runnable runnable = new Runnable() {
+		Runnable runnable = new Runnable() {//no way
 			@Override
 			public void run() {
 				synchronized (obj) {
@@ -60,7 +60,7 @@ class PrintOdd implements Runnable {
 	@Override
 	public void run() {
 		while (counter.value <= 100) {
-			synchronized (counter) {
+			synchronized (counter) {//记忆:先no后wait
 				if (counter.odd) {
 					System.out.println(counter.value);
 					counter.value++;

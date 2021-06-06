@@ -30,6 +30,8 @@ public class RotateStr {
 	public static void main(String[] args) {
 		System.out.println(rotateStr("abcde","cdeab"));
 		System.out.println(rotateStr("abcde","abced"));
+		System.out.println("ABCD".contains("ABC"));
+		System.out.println("ABCD".contains("ABD"));
 
 	}
 
